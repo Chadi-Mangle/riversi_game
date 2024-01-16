@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>clientserver module &#8212; Riversi game  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="riversi module" href="riversi.html" />
+    <link rel="prev" title="app_riversi module" href="app_riversi.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-clientserver">
+<span id="clientserver-module"></span><h1>clientserver module<a class="headerlink" href="#module-clientserver" title="Link to this heading">¶</a></h1>
+<p>ClientServeur class file</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="clientserver.BoardWithoutGUIClientServer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">clientserver.</span></span><span class="sig-name descname"><span class="pre">BoardWithoutGUIClientServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/clientserver.html#BoardWithoutGUIClientServer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#clientserver.BoardWithoutGUIClientServer" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="riversi.html#riversi.BoardWithoutGUI" title="riversi.BoardWithoutGUI"><code class="xref py py-class docutils literal notranslate"><span class="pre">BoardWithoutGUI</span></code></a>, <a class="reference internal" href="#clientserver.ClientServeur" title="clientserver.ClientServeur"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClientServeur</span></code></a></p>
+<p>Class of a reversi Game Board for with a multiplayer connexion.</p>
+<p>This class is inherited of BoardWithoutGUI and ClientServeur.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="clientserver.BoardWithoutGUIClientServer.handle_connection">
+<span class="sig-name descname"><span class="pre">handle_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/clientserver.html#BoardWithoutGUIClientServer.handle_connection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#clientserver.BoardWithoutGUIClientServer.handle_connection" title="Link to this definition">¶</a></dt>
+<dd><p>Procedure for the client serveur game logic</p>
+<p>client: your game socket</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="clientserver.ClientServeur">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">clientserver.</span></span><span class="sig-name descname"><span class="pre">ClientServeur</span></span><a class="reference internal" href="_modules/clientserver.html#ClientServeur"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#clientserver.ClientServeur" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for a clientServeur game logic</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="clientserver.ClientServeur.connect_to_game">
+<span class="sig-name descname"><span class="pre">connect_to_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">55555</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/clientserver.html#ClientServeur.connect_to_game"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#clientserver.ClientServeur.connect_to_game" title="Link to this definition">¶</a></dt>
+<dd><p>Procedure who permit to host a game</p>
+<p>host: your own ip address
+port: the connection port</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="clientserver.ClientServeur.handle_connection">
+<span class="sig-name descname"><span class="pre">handle_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/clientserver.html#ClientServeur.handle_connection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#clientserver.ClientServeur.handle_connection" title="Link to this definition">¶</a></dt>
+<dd><p>Procedure for the client serveur game logic</p>
+<p>client: your game socket</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="clientserver.ClientServeur.host_game">
+<span class="sig-name descname"><span class="pre">host_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">55555</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/clientserver.html#ClientServeur.host_game"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#clientserver.ClientServeur.host_game" title="Link to this definition">¶</a></dt>
+<dd><p>Procedure who permit to host a game</p>
+<p>host: your own ip address
+port: the connection port</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Riversi game</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">riversi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="app_riversi.html">app_riversi module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">clientserver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="riversi.html">riversi module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">riversi</a><ul>
+      <li>Previous: <a href="app_riversi.html" title="previous chapter">app_riversi module</a></li>
+      <li>Next: <a href="riversi.html" title="next chapter">riversi module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Chadi Manglé.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/clientserver.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
